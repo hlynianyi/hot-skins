@@ -70,13 +70,13 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside className="sidebar">
       {topics.map(topic => (
-        <a
+        <button
           onClick={() => changeArticle(topic.id)}
           key={topic.id}
           className={currentArticleKey === topic.id ? 'active' : ''}
         >
           {topic.name}
-        </a>
+        </button>
       ))}
     </aside>
   );
